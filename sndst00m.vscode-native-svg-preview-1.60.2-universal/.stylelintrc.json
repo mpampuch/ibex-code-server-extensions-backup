@@ -1,0 +1,22 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["blockless-after-same-name-blockless", "first-nested"],
+        "ignoreAtRules": ["after-comment", "import"]
+      }
+    ],
+    "color-hex-case": "lower",
+    "color-hex-length": "long",
+    "comment-empty-line-before": null,
+    "font-family-no-missing-generic-family-keyword": null,
+    "indentation": "tab",
+    "order/properties-alphabetical-order": true,
+    "selector-pseudo-element-colon-notation": "single",
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null
+  }
+}

@@ -1,0 +1,13 @@
+{
+	"displayName": "Native SVG Preview",
+	"description": "Provides VS Code with a native-style SVG image preview.",
+	"category.svg": "SVG Preview",
+	"customEditors.svgPreview": "SVG Preview",
+	"command.svgShowPreview": "Open Preview",
+	"command.svgShowSource": "Open Source",
+	"command.svgShowPreviewToSide": "Open Preview to the Side",
+	"command.zoomIn": "Zoom In",
+	"command.zoomOut": "Zoom Out",
+	"preview.svgLoadError": "An error occurred while loading the SVG.",
+	"preview.svgLoadErrorLink": "Open file using VS Code's standard text/binary editor?"
+}

@@ -1,0 +1,59 @@
+{
+	"name": "vscode-singularity",
+	"displayName": "Apptainer/Singularity",
+	"description": "Provides syntax highlighting for Apptainer/Singularity definition files.",
+	"version": "0.7.0",
+	"icon": "images/icon.png",
+	"publisher": "onnovalkering",
+	"engines": {
+		"vscode": "^1.35.0"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/onnovalkering/vscode-singularity.git"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "singularity",
+				"filenames": [
+					"Singularity",
+					"Apptainer"
+				],
+				"filenamePatterns": [
+					"Singularity.*",
+					"Apptainer.*"
+				],
+				"extensions": [
+					".def"
+				],
+				"aliases": [
+					"Singularity",
+					"Apptainer"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "singularity",
+				"scopeName": "source.singularity",
+				"path": "./syntaxes/singularity.tmLanguage.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "73548103-01fc-4f3a-91d0-81a433b1aded",
+		"publisherId": "361fa0d3-70b8-4d0d-bc5c-a82876d584c2",
+		"publisherDisplayName": "onnovalkering",
+		"targetPlatform": "universal",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1702898165738,
+		"preRelease": false
+	}
+}

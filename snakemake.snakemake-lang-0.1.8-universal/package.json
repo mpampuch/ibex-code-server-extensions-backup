@@ -1,0 +1,67 @@
+{
+	"name": "snakemake-lang",
+	"displayName": "Snakemake Language",
+	"icon": "logo-snake.png",
+	"description": "Basic syntax, language, and snippet support for Snakefiles (Snakemake workflow definition files)",
+	"version": "0.1.8",
+	"publisher": "snakemake",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/snakemake/snakemake-lang-vscode-plugin"
+	},
+	"bugs": {
+		"url": "https://github.com/snakemake/snakemake-lang-vscode-plugin/issues"
+	},
+	"engines": {
+		"vscode": "^1.39.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "snakemake",
+				"aliases": [
+					"Snakemake",
+					"snakemake"
+				],
+				"filenames": [
+					"Snakefile"
+				],
+				"extensions": [
+					".smk"
+				],
+				"configuration": "./languages/snakemake.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "snakemake",
+				"scopeName": "source.python.snakemake",
+				"path": "./syntaxes/snakemake.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "snakemake",
+				"path": "./snippets/snakemake.json"
+			}
+		]
+	},
+	"devDependencies": {
+		"js-yaml": "^3.13.1",
+		"mustache": "^3.1.0"
+	},
+	"__metadata": {
+		"id": "e4cb1a73-a0e5-4c4e-a961-54d7a5f8f1eb",
+		"publisherId": "11f5585c-6770-45b8-a406-fda737bd935d",
+		"publisherDisplayName": "snakemake",
+		"targetPlatform": "universal",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1700153683106,
+		"preRelease": false
+	}
+}

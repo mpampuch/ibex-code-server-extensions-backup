@@ -1,0 +1,62 @@
+{
+  "name": "Snakemake",
+  "scopeName": "source.python.snakemake",
+  "fileTypes": [
+    "Snakefile",
+    "smk"
+  ],
+  "patterns": [
+    {
+      "include": "#configs"
+    },
+    {
+      "include": "#rules"
+    },
+    {
+      "include": "#ruleparams"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "source.python"
+    }
+  ],
+  "repository": {
+    "configs": {
+      "match": "(?x)\n  ^\\s* # Leading whitespace\n  (configfile|include|localrules|onerror|onstart|onsuccess|ruleorder|snakefile|workdir) # Keywords\n  : # Ending in colon\n",
+      "captures": {
+        "1": {
+          "name": "keyword.control.snakemake.config"
+        }
+      }
+    },
+    "rules": {
+      "match": "(?x)\n  ^\\s* # Leading whitespace\n  (checkpoint|rule|subworkflow) # Keywords\n  (?:\\s+(\\w+))? # Optional rule name\n  : # Ending in colon\n",
+      "captures": {
+        "1": {
+          "name": "keyword.control.snakemake"
+        },
+        "2": {
+          "name": "entity.name.function.snakemake.rule"
+        }
+      }
+    },
+    "ruleparams": {
+      "match": "(?x)\n  ^\\s* # Leading whitespace\n  (benchmark|conda|cwl|group|input|log|message|output|params|priority|resources|run|script|shadow|shell|singularity|threads|version|wildcard_constraints|wrapper) # Keywords\n  : # Ending in colon\n",
+      "captures": {
+        "1": {
+          "name": "keyword.control.snakemake.ruleparam"
+        }
+      }
+    },
+    "functions": {
+      "match": "(ancient|directory|expand|pipe|protected|temp|touch|unpack)",
+      "captures": {
+        "1": {
+          "name": "support.function.builtin.snakemake"
+        }
+      }
+    }
+  }
+}

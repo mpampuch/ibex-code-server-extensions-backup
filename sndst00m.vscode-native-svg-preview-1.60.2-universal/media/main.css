@@ -1,0 +1,126 @@
+html,
+body {
+	height: 100%;
+	text-align: center;
+	width: 100%;
+}
+
+body > img {
+	max-height: none;
+	max-width: none;
+}
+
+.container:focus {
+	outline: none !important;
+}
+
+.container {
+	box-sizing: border-box;
+	padding: 5px 0 0 10px;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.container.svg {
+	box-sizing: border-box;
+	display: flex;
+	padding: 0;
+}
+
+.container.svg > img {
+	background-position: 0 0, 8px 8px;
+	background-size: 16px 16px;
+	padding: 0;
+}
+
+.container.svg > img {
+	background-image:
+		linear-gradient(45deg, rgb(230, 230, 230) 25%, transparent 25%, transparent 75%, rgb(230, 230, 230) 75%, rgb(230, 230, 230)),
+		linear-gradient(45deg, rgb(230, 230, 230) 25%, transparent 25%, transparent 75%, rgb(230, 230, 230) 75%, rgb(230, 230, 230));
+}
+
+.vscode-dark.container.svg > img {
+	background-image:
+		linear-gradient(45deg, rgb(20, 20, 20) 25%, transparent 25%, transparent 75%, rgb(20, 20, 20) 75%, rgb(20, 20, 20)),
+		linear-gradient(45deg, rgb(20, 20, 20) 25%, transparent 25%, transparent 75%, rgb(20, 20, 20) 75%, rgb(20, 20, 20));
+}
+
+.container > img.pixelated {
+	image-rendering: pixelated;
+}
+
+.container > img.scale-to-fit {
+	max-height: calc(100% - 20px);
+	max-width: calc(100% - 20px);
+	object-fit: contain;
+}
+
+.container > img {
+	margin: auto;
+}
+
+.container.reflow {
+	border-top: 1px var(--vscode-editorLineNumber-foreground) solid;
+	height: calc(100% - 9px);
+	margin: 0;
+	overflow: hidden;
+}
+
+.container.reflow > img {
+	height: 100%;
+	margin: 0 auto auto 0;
+	min-width: 100%;
+	transform-origin: top left;
+	width: 100%;
+}
+
+.container.ready.zoom-in {
+	cursor: zoom-in;
+}
+
+.container.ready.zoom-out {
+	cursor: zoom-out;
+}
+
+.container .embedded-link,
+.container .embedded-link:hover {
+	cursor: pointer;
+	margin-left: 5px;
+	text-decoration: underline;
+}
+
+.container.loading,
+.container.error {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.loading-indicator {
+	background-image: url("./loading.svg");
+	background-size: cover;
+	height: 30px;
+	width: 30px;
+}
+
+.loading-indicator,
+.svg-load-error {
+	display: none;
+}
+
+.loading .loading-indicator,
+.error .svg-load-error {
+	display: block;
+}
+
+.svg-load-error {
+	margin: 1em;
+}
+
+.vscode-dark .loading-indicator {
+	background-image: url("./loading-dark.svg");
+}
+
+.vscode-high-contrast .loading-indicator {
+	background-image: url("./loading-hc.svg");
+}
